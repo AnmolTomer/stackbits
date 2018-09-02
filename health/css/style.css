@@ -1,0 +1,90 @@
+/* You can change the color of box, shadow and font */
+body {
+  font-family: "Bangers", sans-serif;
+  background: url("http://upload.wikimedia.org/wikipedia/ru/archive/b/bd/20110924193126!%D0%9F%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%B6%D0%B8_Marvel_Comics.jpg") no-repeat 50% 50%;
+  text-align: center;
+  font-size: 30px;
+  color: #000;
+  overflow-y: scroll;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+}
+
+/* General styles */
+.comics-dialog,
+.comics-thought {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  padding: 40px;
+  background-color: #fff;
+  margin: 80px 80px 200px;
+  -webkit-filter: drop-shadow(0 4px 0 #65c1ff);
+  filter: drop-shadow(0 4px 0 #65c1ff);
+  -moz-transition: 2s;
+  -o-transition: 2s;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+.comics-dialog:after,
+.comics-thought:after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+.comics-dialog:hover,
+.comics-thought:hover {
+  top: -30px;
+  -webkit-filter: drop-shadow(0 10px 0 #65c1ff);
+  filter: drop-shadow(0 10px 0 #65c1ff);
+}
+
+/* Styles for dialog box */
+.comics-dialog {
+  width: 360px;
+  height: 70px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.comics-dialog:after {
+  width: 200px;
+  height: 70px;
+  right: -32px;
+  bottom: -45px;
+  border-right: 90px solid #fff;
+  -moz-border-radius-bottomright: 370px 200px;
+  -webkit-border-bottom-right-radius: 370px 200px;
+  border-bottom-right-radius: 370px 200px;
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+
+/* Styles for thought box */
+.comics-thought {
+  width: 150px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: -60px -50px 0 -20px #fff, 60px -45px 0 -40px #fff;
+  -webkit-box-shadow: -60px -50px 0 -20px #fff, 60px -45px 0 -40px #fff;
+  box-shadow: -60px -50px 0 -20px #fff, 60px -45px 0 -40px #fff;
+}
+.comics-thought:after {
+  width: 150px;
+  height: 150px;
+  right: -30px;
+  bottom: -10px;
+  background: #fff;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: -140px 0px 0 #fff, -50px 30px 0 -10px #fff, -60px 120px 0 -60px #fff, -90px 155px 0 -65px #fff, -120px 175px 0 -70px #fff;
+  -webkit-box-shadow: -140px 0px 0 #fff, -50px 30px 0 -10px #fff, -60px 120px 0 -60px #fff, -90px 155px 0 -65px #fff, -120px 175px 0 -70px #fff;
+  box-shadow: -140px 0px 0 #fff, -50px 30px 0 -10px #fff, -60px 120px 0 -60px #fff, -90px 155px 0 -65px #fff, -120px 175px 0 -70px #fff;
+}

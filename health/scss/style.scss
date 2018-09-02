@@ -1,0 +1,82 @@
+@import "compass/css3";
+
+/* You can change the color of box, shadow and font */
+$color-box: #fff;
+$color-shadow: #65c1ff;
+$color-font: #000;
+
+body {
+  font-family: "Bangers", sans-serif;
+  background: url("http://upload.wikimedia.org/wikipedia/ru/archive/b/bd/20110924193126!%D0%9F%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%B6%D0%B8_Marvel_Comics.jpg") no-repeat 50% 50%;  
+  text-align: center;
+  font-size: 30px;
+  color: $color-font;
+  overflow-y: scroll;
+  @include background-size(100% auto);
+}
+
+/* General styles */
+.comics-dialog,
+.comics-thought {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  padding: 40px;
+  background-color: $color-box;
+  margin: 80px 80px 200px;
+  //@include text-shadow(1px 1px 0 $color-shadow);
+  @include filter(drop-shadow(0 4px 0 $color-shadow));
+  @include transition(2s);
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+  &:hover {
+    top: -30px;
+    @include filter(drop-shadow(0 10px 0 $color-shadow));
+  }
+}
+
+/* Styles for dialog box */ 
+.comics-dialog {
+  width: 360px;
+  height: 70px;
+  @include border-radius(50%);
+  &:after {
+    width: 200px;
+    height: 70px;
+    right: -32px;
+    bottom: -45px;
+    border-right: 90px solid $color-box;
+    @include border-bottom-right-radius(370px 200px);
+    @include transform(rotate(-30deg));
+  }
+}
+
+/* Styles for thought box */ 
+.comics-thought {
+  width: 150px;
+  @include border-radius(50%);
+  @include box-shadow(
+    -60px -50px 0 -20px $color-box, 
+    60px -45px 0 -40px $color-box
+    );
+  &:after {
+    width: 150px;
+    height: 150px;
+    right: -30px;
+    bottom: -10px; 
+    background: $color-box;
+    @include border-radius(50%);
+    @include box-shadow(
+      -140px 0px 0 $color-box,
+      -50px 30px 0 -10px $color-box,
+      -60px 120px 0 -60px $color-box,
+      -90px 155px 0 -65px $color-box,
+      -120px 175px 0 -70px $color-box      
+      );
+  }
+}
+
