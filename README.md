@@ -1,5 +1,5 @@
 # StackBits Hackathon 2k18 Project
-The official source code for StackBits.
+The official source code for StackBits (An all in one forum for a Smart City)
 
 Team Members : <br />
 [Ankit Gundewar 18BCE1247](https://github.com/roguehunterx)<br />
@@ -7,4 +7,5 @@ Team Members : <br />
 [Apratim Shukla 18BLC1085](https://github.com/apratimshukla6/)<br />
 [Rishikesh Sriram 18BCE1049](https://github.com/rishikesh06)<br />
 <br />
-Made with love in PHP and Breezometer. ♥
+Made with love in PHP and using Breezometer API. ♥
+
